@@ -10,24 +10,24 @@
         <!--  SEO STUFF END -->
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="css/custom.css" />
-        <link rel="stylesheet" href="css/isotope.css" />
-        <link rel="stylesheet" href="css/flexslider.css" />
-        <link rel="stylesheet" href="css/font-awesome.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/bootstrap.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/custom.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/isotope.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/flexslider.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/font-awesome.css" />
 
-        <link rel="stylesheet" href="css/font-awesome-ie7.css" />
-        <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/switcher.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/font-awesome-ie7.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/switcher.css" />
 
         <!--[if lte IE 8]>
             <link rel="stylesheet" type="text/css" href="css/IE-fix.css" />
         <![endif]-->
 
-        <link rel="stylesheet" href="css/orange_color_scheme.css" />
-        <link rel="alternate stylesheet" type="text/css" media="screen" title="blue-theme" href="css/blue_color_scheme.css" />
-        <link rel="alternate stylesheet" type="text/css" media="screen" title="red-theme" href="css/red_color_scheme.css" />
-        <link rel="alternate stylesheet" type="text/css" media="screen" title="grenn-theme" href="css/green_color_scheme.css" />
+        <link rel="stylesheet" href="<?php echo theme_url() ?>css/orange_color_scheme.css" />
+        <link rel="alternate stylesheet" type="text/css" media="screen" title="blue-theme" href="<?php echo theme_url() ?>css/blue_color_scheme.css" />
+        <link rel="alternate stylesheet" type="text/css" media="screen" title="red-theme" href="<?php echo theme_url() ?>css/red_color_scheme.css" />
+        <link rel="alternate stylesheet" type="text/css" media="screen" title="grenn-theme" href="<?php echo theme_url() ?>css/green_color_scheme.css" />
     </head>
     <body>
         <!-- THE LINE AT THE VERY TOP OF THE PAGE -->
@@ -117,7 +117,7 @@
                         <div class="flexslider">
                             <ul class="slides">
                                 <li>
-                                    <img src="img/NEW-Slide-1.png" alt="HTML5 and CSS3 theme built on the Twitter Bootstrap Framework." />
+                                    <img src="<?php echo theme_url() ?>img/NEW-Slide-1.png" alt="HTML5 and CSS3 theme built on the Twitter Bootstrap Framework." />
                                     <div class="caption slide-1">
                                         <h2>Meet your next web<br /> project’s superhero!</h2>
                                         <p>Introducing Clean, an all-new, super-clean, ultra-responsive<br /> HTML5 and CSS3 theme built on the amazing Twitter Bootstrap Framework.</p>
@@ -125,7 +125,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="img/NEW-Slide-2.png" alt="Clean is ultra-responsive and looks great on all devices." />
+                                    <img src="<?php echo theme_url() ?>img/NEW-Slide-2.png" alt="Clean is ultra-responsive and looks great on all devices." />
                                     <div class="caption slide-2">
                                         <h2>Holy smokes this baby’s<br /> ultra responsive!</h2>
                                         <p>Thanks to HTML5, CSS3 and Twitter Bootstrap the Clean theme allows you<br /> to create a single site that looks great on practically any device.</p>
@@ -133,7 +133,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="img/NEW-Slide-3.png" alt="Clean's modern interface design makes your content pop!" />
+                                    <img src="<?php echo theme_url() ?>img/NEW-Slide-3.png" alt="Clean's modern interface design makes your content pop!" />
                                     <div class="caption slide-3">
                                         <h2>A clean and modern design<br /> that makes your content pop!</h2>
                                         <p>A theme that utilizes a beautiful, clean and modern interface<br /> that makes your content the focus of your website visitor’s attention.</p>
@@ -141,7 +141,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="img/NEW-Slide-4.png" alt="Includes exclusive bonus pages that are very useful." />
+                                    <img src="<?php echo theme_url() ?>img/NEW-Slide-4.png" alt="Includes exclusive bonus pages that are very useful." />
                                     <div class="caption slide-4">
                                         <h2>Includes 4 exclusive bonus pages<br /> that add immediate and practical value!</h2>
                                         <p>A theme that utilizes a beautiful, clean and modern interface<br /> that makes your content the focus of your website visitor's attention.</p>
@@ -156,44 +156,24 @@
                 <!-- MAIN CONTENT AREA: CLEAN CUSTOM - PORTFOLIO GRID BLOCK (ORIGINALLY DESIGNED FOR HOME PAGE) -->
                 <div class="portfolio-grid-1">
                     <div class="title-wrapper">
-                        <h2>A FEW OF OUR RECENT PROJECTS</h2><a class="all" href="#">View more projects</a>
+                        <h2>Proximos Cursos</h2><a class="all" href="#">View more projects</a>
                     </div>
                     <div class="clear-both"></div>
                     <div id="home_responsive" class="row show-grid">
+                        <?php foreach($cursos as $curso): ?>
                         <div class="span4 hp-wrapper">
                             <div class="fancy-wrapper">
-                                <a class="fancy" href="img/portfolio-1-large.png">                                
+                                <a class="fancy" href="<?php echo theme_url() ?>img/portfolio-1-large.png">                                
                                 </a>
-                                <img alt="" src="img/portfolio-1-small.png" />
+                                <img alt="" src="<?php echo theme_url() ?>img/portfolio-1-small.png" />
                             </div>
                             <div class="bottom-block">
                                 <a href="#">Project #1</a>
                                 <p>web design</p>
                             </div>
                         </div>
-                        <div class="span4 hp-wrapper">
-
-                            <div class="fancy-wrapper">
-                                <a class="fancy" href="img/portfolio-2-large.png">
-                                </a>
-                                <img alt="" src="img/portfolio-2-small.png" />
-                            </div>
-                            <div class="bottom-block">
-                                <a href="#">Project #2</a>
-                                <p>photography</p>
-                            </div>
-                        </div>
-                        <div class="span4 hp-wrapper">
-                            <div class="fancy-wrapper">
-                                <a class="fancy" href="img/portfolio-3-large.png">
-                                </a>
-                                <img alt="" src="img/portfolio-3-small.png" />
-                            </div>
-                            <div class="bottom-block">
-                                <a href="#">Project #3</a>
-                                <p>software development</p>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
+                       
                     </div>
                 </div>
                 <!-- MAIN CONTENT AREA: REDESIGN CUSTOM - RECENT POSTS BLOACK (ORIGINALLY DESIGNED FOR HOME PAGE) -->
@@ -286,15 +266,15 @@
         <!-- END FOOTER -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-        <script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
-        <script type="text/javascript" src="js/jquery.isotope.js"></script>
-        <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.0"></script>
-        <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-        <script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/bootstrap.js"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/jquery.imagesloaded.min.js"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/jquery.isotope.js"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/jquery.fancybox.pack.js?v=2.1.0"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/jquery.imagesloaded.min.js"></script>
+        <script type="text/javascript" src="<?php echo theme_url() ?>js/custom.js"></script>
         <!-- Color Selector: remove this script to disable -->
-        <script type="text/javascript" src="js/styleswitch.js" ></script>
+        
     </body>
 </html>

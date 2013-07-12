@@ -24,6 +24,8 @@ class parent_controller extends CI_Controller
         $this->data['header']=$this->Header();
         $this->data['content']=$this->Content();
         
+        $this->data['base_url']=  base_url();
+        
         $view = $this->load->view(THEME_DIR."/layout",$this->data,true);
         
         return $view;

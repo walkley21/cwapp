@@ -365,7 +365,7 @@ $config['proxy_ips'] = '';
 /*custom configs*/
 
 
-$config['theme_dir']='floreria';
-
+$config['theme_dir']='cursos';
+define("THEME_NAME",$config['theme_dir']);
 define("THEME_DIR","../../themes/{$config['theme_dir']}");
 
