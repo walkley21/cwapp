@@ -13,13 +13,9 @@ class home extends parent_controller {
          
          $courses = new Course();
          
-         $all = $courses->get()->all;
-         
-         
-         
-         $data['seguro']="nada es seguro";
-         $data['all']=$all;
-         $view = $this->load->view(THEME_DIR."/home",$data,true);
+         $all = $courses->get(3)->all;
+         $data['cursos']=$all;
+         $view = $this->load->view(THEME_DIR."/home/home",$data,true);
          
          
          return $view;
