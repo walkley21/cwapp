@@ -1,0 +1,31 @@
+#switchform {
+    z-index:1000;    
+    float:left;
+    left:0px;
+    top:100px;
+    background-color:#666666;
+    position:fixed;
+    padding: 15px;
+    border-radius: 0 5px 5px 0;
+}
+#switchform p {
+    font-weight:600;
+    font-size:16px;
+    margin-top:5px;
+    color:#FFF;
+    margin-bottom:5px;
+    text-align: center;
+}
+#switchform .body-pattern-boxes {
+    text-indent: -9999em;
+    width: 20px;
+    height:20px;
+    display:inline-block;
+    margin: 0 5px 5px 0;
+}
+#switchform .body-pattern-boxes img {
+    display:block;
+    width: 18px;
+    height:18px;
+    border:1px solid #CCC;
+}

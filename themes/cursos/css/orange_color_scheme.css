@@ -1,0 +1,429 @@
+/* Color of the very top line in Clean Template
+---------------------------------------------------------------------- */
+
+.top_line {
+    background-color: #000000;
+}
+
+/* Color that link text will appear as
+---------------------------------------------------------------------- */
+
+a {
+    color: #ff6600;
+}
+
+/* Color that appears when user hovers over a link
+---------------------------------------------------------------------- */
+
+a:hover {
+    color: #000000;
+}
+
+/* Text color of the active link in a drop down menu
+---------------------------------------------------------------------- */
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#333333', GradientType=0);
+}
+.navbar .nav .open .dropdown-menu .active a {
+    color: #ff6600;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#333333', GradientType=0);
+    background-color: #333333;
+}
+
+/* Text color of the active link in a drop down menu when you hover over it
+---------------------------------------------------------------------- */
+
+.navbar .nav .open .dropdown-menu .active a:hover {
+    color: #ff6600;
+}
+
+.navbar .nav .open .dropdown-menu .active a:hover {
+    background-color: #FF6600;
+}
+
+/* Text color of the active navbar item
+---------------------------------------------------------------------- */
+
+.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .active a > i, .navbar .nav .active a > i:hover {
+    color: #ff6600;
+    background: url("../img/menu_square_orange.png") no-repeat scroll center 82px transparent;
+}
+
+/* Primary menu text color when you hover over it (does not include the sub-menu text)
+---------------------------------------------------------------------- */
+
+.navbar .nav li.active a, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    color: #FF6600;
+    background: url("../img/menu_square_orange.png") no-repeat scroll center 82px transparent;
+}
+
+.navbar .nav > li.active, .navbar .nav > li.active:hover, .navbar .nav > li:hover {
+    border-bottom: 1px solid #FF6600;
+}
+
+/* Color of the stripe in a dropdown menu when you hover over vertical menu item
+---------------------------------------------------------------------- */
+
+.navbar .nav > li .dropdown-menu li a:hover {
+    background-color: #ff6600;
+    background-image: none !important;
+    filter: none;
+}
+
+/* Color of the text in a dropdown menu when you hover over it
+---------------------------------------------------------------------- */
+
+.navbar .nav > li .dropdown-menu li a:hover {
+    color: #ffffff;
+}
+
+/* Color of the menu bar's sub-menu text when you hover over it and the color of both the primary and sub-menu text that has no sub-nav when you hover over it
+---------------------------------------------------------------------- */
+
+.navbar .nav > li:hover a, .navbar .nav > li:hover a i {
+    color: #ff6600;
+}
+
+/* Color of bar above active menu item or menu item when you hover over it
+---------------------------------------------------------------------- */
+
+.navbar .nav .active > a, .navbar .nav li:hover > a {
+    border-top: 9px solid #ff6600;
+    background: url("../img/menu_square_orange.png") no-repeat scroll center 82px transparent;
+}
+
+/* Color of Twitter bar
+---------------------------------------------------------------------- */
+
+.recent-tweets {
+    background-color: #2773ae;
+}
+
+/* Color of First and Last Name on blog comments
+---------------------------------------------------------------------- */
+
+.comments .name {
+    color: #666666;
+}
+
+/* Headline that shows the number of comments on a blog post
+---------------------------------------------------------------------- */
+
+.comments  h2 {
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+/* Theme colored dropcap (the standard dropcap is black)
+---------------------------------------------------------------------- */
+
+.dropcap-theme {
+    color: #FF6600;
+}
+
+.dropcap-black {
+    color: #000000;
+}
+
+/* Color of table headers in highlighted price tables
+---------------------------------------------------------------------- */
+
+.dif-table .span3 .title {
+    background-color: #FF6600;    
+}
+
+/* Color of table headers in non-highlighted price tables
+---------------------------------------------------------------------- */
+
+.dif-table .title {
+    background-color: #000000;
+}
+
+/* Color of pricing/cost text in price tables
+---------------------------------------------------------------------- */
+
+.dif-table .cost {
+    color: #000000;
+}
+
+/* Color tab on text divider 5
+---------------------------------------------------------------------- */
+
+.text-divider5 span {
+    background-color: #FF6600;
+}
+
+/* Color tab on text divider 6
+---------------------------------------------------------------------- */
+
+.text-divider6 span {
+    background-color: #FF6600;
+}
+
+/* Highlight color of image slides when you hover them in portfolio items
+---------------------------------------------------------------------- */
+
+.portfolio-slider #carousel .slides li:hover {
+    border: 2px solid #2773ae;
+}
+
+/* Highlight color of the active image slide in portfolio items
+---------------------------------------------------------------------- */
+
+.portfolio-slider #carousel .slides li.flex-active-slide {
+    border: 2px solid #2773ae;
+}
+
+/* Background color of mobile dropdown nav
+---------------------------------------------------------------------- */
+
+.buttons-container {
+    background-color: #FF6600;
+}
+
+/* Default buttons color */
+
+.btn-theme {
+    background-color: #ff6600;
+}
+
+/* Coming Soon page button colors
+---------------------------------------------------------------------- */
+.coming-soon-btn {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Color of active nav filter on portfolio and portfolio grid pages
+---------------------------------------------------------------------- */
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background-color: #ff6600;
+}
+
+/* Check icon color
+---------------------------------------------------------------------- */
+.icon-ok {
+    color: #333333;
+}
+
+/* Portfolio mode switches color theme
+---------------------------------------------------------------------- */
+
+.portfolio-switch li a {
+    display: block;
+    width: 42px;
+    height: 27px;
+    background: transparent url("../img/portfolio_toggles.png") top left no-repeat;
+    border-radius: 5px;
+}
+.portfolio-switch li.collapsed a {
+    background-position: 0 -31px;
+    background-color: #cccccc;
+}
+.portfolio-switch li.collapsed a:hover {
+    background-color: #2773ae;
+}
+.portfolio-switch li.collapsed a:hover, .portfolio-switch li.collapsed a.active  {
+    background-position: 0 -31px;
+}
+.portfolio-switch li.simple a {
+    background-position: 0 0;
+    background-color: #cccccc;
+}
+.portfolio-switch li.simple a:hover {
+    background-color: #2773ae;
+    background-position: 0 0;
+}
+.portfolio-switch li a.active {
+    background-color: #2773ae;
+}
+
+/* Price Tables check-icon color
+---------------------------------------------------------------------- */
+
+.dif-table ul li i {
+    color: #FF6600;
+    padding-right: 1px;
+}
+
+/* Price Tables primary buttons color
+---------------------------------------------------------------------- */
+
+.price-table-object .btn-primary {
+color: white;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+background-color: #000000;
+background-image: linear-gradient(bottom, #000000 33%, #3A3D4A 100%);
+background-image: -o-linear-gradient(bottom, #000000 33%, #3A3D4A 100%);
+background-image: -moz-linear-gradient(bottom, #000000 33%, #3A3D4A 100%);
+background-image: -webkit-linear-gradient(bottom, #000000 33%, #3A3D4A 100%);
+background-image: -ms-linear-gradient(bottom, #000000 33%, #3A3D4A 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.33, #000000),
+	color-stop(1, #3A3D4A)
+);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+border-color: #04C #04C #002A80;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.price-table-object .btn:hover {
+color: #333;
+text-decoration: none;
+background-color: #E6E6E6;
+background-position: 0 -15px;
+-webkit-transition: background-position 0.1s linear;
+-moz-transition: background-position 0.1s linear;
+-o-transition: background-position 0.1s linear;
+transition: background-position 0.1s linear;
+}
+.price-table-object .btn-primary:hover, .price-table-object .btn-primary:active, .price-table-object .btn-primary.active, .price-table-object .btn-primary.disabled, .price-table-object .btn-primary[disabled] {
+color: white;
+background-color: #000000;
+}
+
+/* Alert block colors
+------------------------------------------------------------------------- */
+
+.alert-theme {
+    border-radius: 0;
+    border: none;
+    background: none repeat scroll 0 0 #FF6600;
+}
+.alert-theme h4 {
+    color: #000000;
+    text-shadow: none;
+}
+blockquote {
+    border-left: 5px solid #FF6600;
+}
+/* FAQ Page Title Color
+------------------------------------------------------------------------- */
+
+.faq-title {
+    color: #ff6600;
+}
+/* Portfolio item bottom border line on mouse hover
+------------------------------------------------------------------------- */
+
+.portfolio-grid-1 .hp-wrapper:hover {
+    border-bottom: 1px solid #FF6600;
+}
+
+/* Login form box color
+------------------------------------------------------------------------- */
+
+.login-wrapper {
+    background-color: #ff6600;
+}
+
+/* Register form submit button color
+------------------------------------------------------------------------- */
+
+.register-acount .register-btn {
+    background-color: #FF6600;
+}
+
+/* Landing page sidebar button color
+------------------------------------------------------------------------- */
+
+.download-form .download-btn {
+    background-color: #FF6600;
+}
+
+/* Landing page header text color
+------------------------------------------------------------------------- */
+
+.landing-head p span {
+    color: #ff6600;
+}
+
+/* Landing page feature text color
+------------------------------------------------------------------------- */
+
+.landing-content .lp-feature {
+    color: #ff6600;
+}
+
+/* Coming Soon Page color scheme color
+------------------------------------------------------------------------- */
+
+.coming-soon-content {
+    background-color: #FF6600;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FF6600;
+}
+
+/* Portfolio item link color
+------------------------------------------------------------------------- */
+
+.portfolio-grid-1 .hp-wrapper .bottom-block a:hover {
+    color: #FF6600;
+}
+
+/* Portfolio item download button
+------------------------------------------------------------------------- */
+
+.portfolio-item-download {
+    background-color: #FF6600;
+}
+
+/* View more projects link on the Homepage
+------------------------------------------------------------------------- */
+
+.title-wrapper .all {
+    color: #FF6600;
+}
+
+/* Hover image above portfolio items on the homepage
+------------------------------------------------------------------------- */
+
+.fancy-wrapper .fancy {
+    background: url("../img/home_portfolio_hover_orange.png") no-repeat scroll center center transparent;
+}
+
+/* Portfolio and Our Team grids bricks
+------------------------------------------------------------------------- */
+
+.portfolio-grid-1 .hp-wrapper:hover .bottom-block {
+    background: url("../img/menu_square_orange.png") no-repeat scroll center bottom #F1F1F1;
+}
+
+/* FAQ collapse buttons sprite
+------------------------------------------------------------------------- */
+
+.accordion a.collapsed, .toggle-box .collapsed {
+    background: url("../img/collapse_btn_orange.png") no-repeat scroll left -58px transparent;
+}
+.accordion .accordion-toggle, .toggle-box a {
+    background: url("../img/collapse_btn_orange.png") no-repeat scroll left 10px transparent;
+}
+
+/* Main Logo
+------------------------------------------------------------------------- */
+
+a.logo {
+    background: url("../img/logo_orange.png") no-repeat top left transparent;
+}
+
+/* Footer Links Hover Color
+------------------------------------------------------------------------- */
+
+.footer-wrapper a:hover {
+    color: #ff6600;
+}
+
+/* Copyright links Hover Color
+------------------------------------------------------------------------- */
+
+.footer-bottom p a:hover {
+    color: #ff6600;
+}
