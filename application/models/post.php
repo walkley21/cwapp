@@ -10,5 +10,11 @@ class Post extends ParentModel
     }
     
     
+    function getPostDate()
+    {
+        return @date("d / m / Y",strtotime($this->created));
+        
+    }
+    
     
 }

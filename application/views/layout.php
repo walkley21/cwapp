@@ -161,9 +161,9 @@
             </li>
               <li class="active-">
               <span class="glow"></span>
-              <a href="<?php echo site_url("/projects/") ?>">
+              <a href="<?php echo admin_url("/posts/") ?>">
                   <i class="icon-laptop icon-2x"></i>
-                  <span>Tareas</span>
+                  <span>Posts</span>
               </a>
               
             </li>

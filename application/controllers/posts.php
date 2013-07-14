@@ -11,16 +11,23 @@ class posts extends parent_controller {
      function Content()
     {
          
-         $courses = new Post();
+        $p = new Post();
+        $all = $p->get(5)->order_by('updated','asc')->all;
+        $data['posts']=$all;
+        $v = $this->load->view(theme_dir("posts/posts"),$data,true);
+         return $v;
          
-         $all = $courses->get(3)->all;
-         $data['cursos']=$all;
-         $view = $this->load->view(THEME_DIR."/home/home",$data,true);
-         
-         
-         return $view;
-        
     }
+    
+    
+    /*function _remap($param)
+    {
+        
+       if ($param=='index')
+       $this->index();    
+        
+    }*/
+    
     
 }
 

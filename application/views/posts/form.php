@@ -92,7 +92,7 @@
               <div class="padded">
 
                 <div class="control-group">
-                  <label class="control-label">Nombre del Proyecto</label>
+                  <label class="control-label">Nombre del Curso</label>
                   <div class="controls">
                     <!--input type="text" 
                            class="validate[required]"
@@ -101,7 +101,7 @@
                     <input type="text" 
                            name="name"
                            class="validate[required]"
-                           value="<?php echo '' ?>"
+                           value="<?php echo $record->name; ?>"
                            data-prompt-position="topLeft"/>
                   </div>
                 </div>
@@ -122,7 +122,7 @@
                 <div class="control-group">
                   <label class="control-label">Descripción del Proyecto</label>
                   <div class="controls">
-                    <textarea  name="description" class="validate[required]" data-prompt-position="topLeft"/><?php echo '' ?></textarea>
+                    <textarea  name="description" class="validate[required]" data-prompt-position="topLeft"/><?php echo $record->description; ?></textarea>
                     
                   </div>
                 </div>
@@ -130,23 +130,13 @@
                 
                   
                   
-                <div class="control-group" style="width:50%;float:left;">
+                
+                 <div class="control-group" >
                   <label class="control-label">Fecha de Inicio</label>
-                  <div class="controls">
-                      
-                      
-                     <input id="startdate" value="<?php echo '';?>"  name="startdate" class="fill-up" type="text" placeholder="seleccione una fecha">
-                     <script>
-                         $('#startdate').datepicker({format:"dd/mm/yyyy",language:'es'});
-                     </script>
-                  </div>
-                </div>
-                 <div class="control-group" style="width:50%;float:left;">
-                  <label class="control-label">Fecha de Finalización </label>
                   <div class="controls">
                      <input id="enddate" 
                             name="enddate"
-                            value="<?php echo $record->name ?>" 
+                            value="<?php echo $record->startdate ?>" 
                             class="fill-up" type="text" placeholder="seleccione una fecha">
                     <script>
                          $('#enddate').datepicker({format:"dd/mm/yyyy",language:'es'});

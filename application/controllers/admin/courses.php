@@ -103,35 +103,7 @@ class courses extends admin_parent_controller{
     
     
     
-    function test()
-    {
-        
-        $p = new Project();
-        $rows = $p->getTreeTable();
-         $table = new Table();
-            
-         
-        $p->getDropdownParent();
-        
-        return ;
-        foreach($rows as $row)
-        {
-            
-          
-            
-            $label = '';
-            for($i=1;$i<$row->level;$i++)
-            {
-                $label.="-- ";
-            }
-            $td = new Td("$label".$row->name);
-            $tr = new Tr($td);
-            $table->add($tr);
-        }
-        echo $table;
-        
-        
-    }
+    
    
     
     function save($id, $parent = null, $parent_id = null) 

@@ -135,4 +135,30 @@ class ParentModel extends DataMapper{
         return "$i";        
     }
     
+    
+    
+    
+    function getImageSrc()
+    {
+        
+        $image = $this->image->order_by('created','desc')->get(1)->file_name;
+        
+        return base_url("uploads/$image");
+      
+        
+    }
+    
+    /*TODO add word limiter */
+    function getExcerpt()
+    {
+        
+        return $this->description;
+        
+    }
+    function getPermalink($prev ='')
+    {
+        
+        return site_url("{$prev}$this->friendlyurl");
+        
+    }
 }

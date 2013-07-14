@@ -12,6 +12,17 @@ if ( ! function_exists('theme_url'))
 	}
 }
 
+if ( ! function_exists('theme_dir'))
+{
+	function theme_dir($uri = '')
+	{
+		//$CI =& get_instance();
+		//$theme_dir = $CI->config->item("admin_dir"); 
+                return THEME_DIR."/{$uri}";
+                
+	}
+}
+
 if ( ! function_exists('admin_url'))
 {
 	function admin_url($uri = '')

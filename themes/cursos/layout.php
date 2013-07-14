@@ -48,7 +48,8 @@
                                 </div>
                                 <div class="nav-collapse">
                                     <ul class="nav nav-pills">
-                                        <li class="single active"><a href="index.html">HOME</a>
+                                        <li class="single active">
+                                            <a href="<?php echo site_url("/") ?>">HOME</a>
                                         </li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2">
@@ -67,15 +68,8 @@
                                                 <li><a href="coming_soon.html">Coming Soon Page</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#menu4">
-                                                BLOG
-                                            </a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="blog_right_column.html">News and Blog</a></li>
-                                                <li><a href="blog_right_column_post.html">Blog Post</a></li>
-                                            </ul>
+                                        <li class="single active">
+                                            <a href="<?php echo site_url("/posts") ?>">BLOG</a>
                                         </li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" href="#menu3">

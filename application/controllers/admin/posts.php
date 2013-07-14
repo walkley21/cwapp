@@ -111,14 +111,20 @@ class posts extends admin_parent_controller{
         
        
         
+      
+        
        
         $link_table ="tasks_tasks";
         $table_field = "task_id";
         $table_related_field='related_task_id';
        
         $model_name = $this->model_name;
+        
+        
+        
+          
         $p = new $model_name($id);
-        //$p->saveFromPost();
+        $p->saveFromPost();
         
         //delete any old parent
         
