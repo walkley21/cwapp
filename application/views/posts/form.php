@@ -8,10 +8,10 @@
         <div class="pull-left header">
           <h3 class="title">
             <i class="icon-edit"></i>
-               <?php echo $title ?>
+               <?php echo '' ?>
           </h3>
           <h5>
-                <?php echo $subtitle ?>
+                <?php echo '' ?>
           </h5>
         </div>
 
@@ -76,15 +76,15 @@
 
         <div class="box">
           <div class="box-header">
-            <span class="title"> <?php echo $form_title ?></span>
+            <span class="title"> <?php echo '' ?></span>
           </div>
 
           <div class="box-content">
 
-            <form  action="<?php echo $form_action ?>"   
+            <form  action="<?php echo $form_action; ?>"   
                    class="form-horizontal fill-up validatable"
                    method="post"
-                   enctype="<?php echo $form_enctype ?>"
+                   enctype="<?php echo $form_enctype; ?>"
                    
                    
                    >
@@ -101,7 +101,7 @@
                     <input type="text" 
                            name="name"
                            class="validate[required]"
-                           value="<?php echo $record->name ?>"
+                           value="<?php echo '' ?>"
                            data-prompt-position="topLeft"/>
                   </div>
                 </div>
@@ -122,7 +122,7 @@
                 <div class="control-group">
                   <label class="control-label">Descripción del Proyecto</label>
                   <div class="controls">
-                    <textarea  name="description" class="validate[required]" data-prompt-position="topLeft"/><?php echo $record->description?></textarea>
+                    <textarea  name="description" class="validate[required]" data-prompt-position="topLeft"/><?php echo '' ?></textarea>
                     
                   </div>
                 </div>
@@ -135,7 +135,7 @@
                   <div class="controls">
                       
                       
-                     <input id="startdate" value="<?php echo $record->startdate() ?>"  name="startdate" class="fill-up" type="text" placeholder="seleccione una fecha">
+                     <input id="startdate" value="<?php echo '';?>"  name="startdate" class="fill-up" type="text" placeholder="seleccione una fecha">
                      <script>
                          $('#startdate').datepicker({format:"dd/mm/yyyy",language:'es'});
                      </script>
@@ -146,7 +146,7 @@
                   <div class="controls">
                      <input id="enddate" 
                             name="enddate"
-                            value="<?php echo $record->enddate() ?>" 
+                            value="<?php echo $record->name ?>" 
                             class="fill-up" type="text" placeholder="seleccione una fecha">
                     <script>
                          $('#enddate').datepicker({format:"dd/mm/yyyy",language:'es'});
@@ -158,7 +158,7 @@
                 <div class="control-group">
                   <label class="control-label">Presupuesto</label>
                   <div class="controls">
-                    <input type="text" name="budget" class="span3" value="<?php echo $record->budget; ?>"  >
+                    <input type="text" name="budget" class="span3" value=""  >
                     
                   </div>
                 </div>
@@ -166,7 +166,7 @@
                 <div class="control-group">
                   <label class="control-label">Estado</label>
                   <div class="controls">
-                    
+                     <input type="file" name="image" class="span1"  >
                   </div>
                 </div>
                   

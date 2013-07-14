@@ -63,7 +63,8 @@
               <div class="fancy-wrapper">
                   <a class="fancy" href="<?php echo theme_url() ?>img/portfolio-1-large.png">                                
                   </a>
-                  <img alt="" src="<?php echo theme_url() ?>img/portfolio-1-small.png" />
+                  <?php echo $curso->getImage(); ?>
+                  <!--img alt="" src="<?php echo theme_url() ?>img/portfolio-1-small.png" /-->
               </div>
               <div class="bottom-block">
                   <a href="#"><?php echo $curso->name ?></a>
@@ -82,33 +83,22 @@
       <div class="row show-grid clear-both">
           <div class="span12">
               <div class="row show-grid">
+                  
+                  <?php foreach ($posts as $post):?>
                   <div class="span4 block-post">
                       <a class="block-post-img" href="#">
-                          <img alt="" src="img/Blog-Home-1.png" />
+                          <?php echo $post->getImage() ?>
                       </a>
-                      <a class="block-post-title" href="#">A Fresh, Clean Twitter Bootstrap Theme</a>
+                      <a class="block-post-title" href="#"><?php $post->name ?></a>
                       <p class="block-post-date">January 15, 2013</p>
-                      <p class="block-post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.</p>
+                      <p class="block-post-content">
+                          
+                          <?php $post->excerpt ?>
+                          
+                      </p>
                       <a class="block-post-more" href="#">Read more&nbsp;&raquo;</a>
                   </div>
-                  <div class="span4 block-post">
-                      <a class="block-post-img" href="#">
-                          <img alt="" src="img/Blog-Home-2.png" />
-                      </a>
-                      <a class="block-post-title" href="#">Bootstrap 3 Readiness Guide</a>
-                      <p class="block-post-date">January 15, 2013</p>
-                      <p class="block-post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.</p>
-                      <a class="block-post-more" href="#">Read more&nbsp;&raquo;</a>
-                  </div>
-                  <div class="span4 block-post">
-                      <a class="block-post-img" href="#">
-                          <img alt="" src="img/Blog-Home-3.png" />
-                      </a>
-                      <a class="block-post-title" href="#">Learning Grid-Based Design</a>
-                      <p class="block-post-date">January 15, 2013</p>
-                      <p class="block-post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.</p>
-                      <a class="block-post-more" href="#">Read more&nbsp;&raquo;</a>
-                  </div>
+                  <?php endforeach; ?>
               </div>
           </div>
       </div>

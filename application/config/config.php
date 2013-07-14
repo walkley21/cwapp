@@ -26,7 +26,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -366,6 +366,11 @@ $config['proxy_ips'] = '';
 
 
 $config['theme_dir']='cursos';
+
+$config['admin_dir']='admin';
+
+
+
 define("THEME_NAME",$config['theme_dir']);
 define("THEME_DIR","../../themes/{$config['theme_dir']}");
 

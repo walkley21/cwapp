@@ -46,4 +46,6 @@ class parent_controller extends CI_Controller
         
     }
     
+    
+   
 }

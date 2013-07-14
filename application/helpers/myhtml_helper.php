@@ -2315,7 +2315,7 @@ class TextSearch extends Inputelement
     }
 
 
-    function p($argument)
+    function p($argument,$title = '')
     {
         $val = '';
         
@@ -2333,5 +2333,5 @@ class TextSearch extends Inputelement
         }    
         
         
-        echo '<pre style="background-color:#ccc;border:1px solid #999">'.$val.'<pre>';
+        echo '<h1>'.$title.'<h1><pre style="background-color:#ccc;border:1px solid #999">'.$val.'<pre>';
     }

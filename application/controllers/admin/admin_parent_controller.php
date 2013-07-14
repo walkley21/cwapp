@@ -1,7 +1,7 @@
 <?php
 
 
-class admin_parent_controller extends CI_Controller
+class admin_parent_controller extends MY_Controller
 {
     public $view = 'rows';
     public $model_name;
@@ -85,6 +85,10 @@ class admin_parent_controller extends CI_Controller
         
         redirect("{$this->getControllerName()}");
         
+    }
+    
+    function __toString() {
+        return $this->getControllerName();
     }
     
     

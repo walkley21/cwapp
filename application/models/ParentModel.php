@@ -4,10 +4,19 @@ class ParentModel extends DataMapper{
     
     public $controller;
     public $CI;
+    
+    
     public $default_order_by=array('created');
-            function __construct($id = NULL) {
+    public $admin_dir='';
+    function __construct($id = NULL,$controller=null) {
         parent::__construct($id);
+        
+        
+        $this->controller = $controller;
         $this->CI = &get_instance();
+        
+        $this->admin_dir = $this->config->item("admin_dir"); 
+        
     }
     
     function delete_link()
@@ -20,36 +29,47 @@ class ParentModel extends DataMapper{
     {
         
         
-        return base_url("$this->controller/form/{$this->id}");
+        return base_url("{$this->admin_dir}/$this->controller/form/{$this->id}");
         
     }
      function edit_link_field($thefield)
     {
          
         
-        $a = new Anchor($this->$thefield,  site_url("{$this->controller}/form/{$this->id}"));
+        $a = new Anchor($this->$thefield,  admin_url("/{$this->controller}/form/{$this->id}"));
         
        return "$a";
         
         
     }
     
-    function saveFromPost()
+    function saveFromPost($array = null)
     {
         //p($_POST);
-        foreach($_POST as $key =>$field)
+        //p($array,"en sabe ");
+        if ($array == null)
+        $array = $_POST;    
+        
+        foreach($array as $key =>$val)
         {
-            $val = $this->checkDate($this->CI->input->post($key));
+            $val1 = $this->CI->input->post($key);
+            if (!empty($val1))
+            $val = $this->checkDate($val1);
+            
             $this->$key = $val;
-           // echo "[$key] [$val]";
+            
+            
+            //echo "[$key] [$val]";
         }
         $this->save();
-      // die();
+       //die();
     }
     
     
-    function checkDate($val)
+    function checkDate($val,$field_name='')
     {
+        if (empty($val)) return  ; 
+        
         
         if ( 1 === preg_match('~^[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}~', $val))
         {
@@ -102,6 +122,17 @@ class ParentModel extends DataMapper{
             $array[$item->id]=$item->name;
         }
         return $array;
+    }
+    
+    
+     function getImage()
+    {
+        
+        $image = $this->image->order_by('created','desc')->get(1)->file_name;
+        
+        $i = new Img(base_url("uploads/$image"));
+      
+        return "$i";        
     }
     
 }

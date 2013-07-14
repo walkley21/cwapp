@@ -1,6 +1,6 @@
 <?php
 require_once 'ParentModel.php';
-class Course extends ParentModel
+class Post extends ParentModel
 {
     public $has_many =array("image");
     
