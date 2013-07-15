@@ -71,6 +71,9 @@
                                         <li class="single active">
                                             <a href="<?php echo site_url("/posts") ?>">BLOG</a>
                                         </li>
+                                        <li class="single active">
+                                            <a href="<?php echo site_url("/cursos") ?>">CURSOS</a>
+                                        </li>
                                         <li class="dropdown">
                                             <a class="dropdown-toggle" data-toggle="dropdown" href="#menu3">
                                                 PORTFOLIO
@@ -107,7 +110,7 @@
                                 <li><a href="#">HOME</a><span>|</span></li>
                                 <li><a href="#">PAGES</a><span>|</span></li>
                                 <li><a href="#">BLOG</a><span>|</span></li>
-                                <li><a href="#">PORTFOLIO</a><span>|</span></li>
+                                <li><a href="<?php echo base_url("/cursos/") ?>">CURSOS</a></li>
                                 <li><a href="<?php echo base_url("/contact/") ?>">CONTACT</a></li>
                             </ul>
                         </div>

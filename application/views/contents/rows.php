@@ -75,13 +75,13 @@
                             <tbody>
                             <?php foreach ($records  as $record):?>
                             <tr>
-                              <td><?php ?><?php echo $record->edit_link_field('name') ?></td>
+                              <td><?php echo $record->getLevelString() ?><?php echo $record->edit_link_field('name') ?></td>
                                
                                <td><?php echo $record->name?></td>
                                <td><?php echo $record->name?></td>
                                
                                <td><?php echo $record->name ?></td>
-                               <td><?php echo $record->getContents() ?></td>
+                               <td><?php echo '';/*$record->getContents()*/ ?></td>
                                <td><?php echo $record->name ?></td>
                              
                               <td class="center" style="text-align: center">

@@ -169,9 +169,9 @@
             </li>
               <li class="active-">
               <span class="glow"></span>
-              <a href="<?php echo site_url("/projects/") ?>">
+              <a href="<?php echo admin_url("/contents/") ?>">
                   <i class="icon-legal icon-2x"></i>
-                  <span>Incidencias</span>
+                  <span>Contents</span>
               </a>
               
             </li>

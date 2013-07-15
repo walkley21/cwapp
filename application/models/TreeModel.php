@@ -1,7 +1,28 @@
 <?php
-class TreeModel extends ParentModel{
+abstract class TreeModel extends ParentModel{
     
     public $except_id; 
+    
+    
+    /*children have to configure this */
+    
+    public $level;
+   
+   // public $base_table = 'contents';
+    
+    
+    //public $child_field ="content_id";
+    //public $external_parent_field ="course_id"; /*in tassks_tasks external parent is project */
+    
+    //public $parent_field = "related_content_id";
+    //public $link_table="contents_contents";
+    //public $model_name = "Content";
+    //public $parent_table = "contents_courses"; /*for example parent : project child tasks*/
+    //public $parent_name = 'courses';
+    
+    
+    
+    
     function __construct($id = NULL) {
         parent::__construct($id);
     }
@@ -9,24 +30,34 @@ class TreeModel extends ParentModel{
     
     function getTree($excep_id = null,$parent=null,$parent_id=null)
     {
+        
+        //p($this->parent_name);
+        
+        
+        
         $except ='';
         if (!empty($excep_id))
         $except = " AND {$this->base_table}.id !=  '{$excep_id}' ";
         
         $left_join='';
         $and_parent='';
+        
+        /*select only the ones whose parent is a*/
+        
         if (!empty($parent))
         {
-            $left_join="
-            LEFT JOIN projects_tasks ON
-
-            tasks.id = projects_tasks.task_id ";
+            //echo "[$parent]";
             
-            $and_parent = " AND projects_tasks.project_id = 1 ";
+            $left_join="
+            LEFT JOIN {$this->parent_table} ON
+
+            {$this->base_table}.id = {$this->parent_table}.{$this->child_field} ";
+            /*separated---------------------------------------------------------------------*/
+            $and_parent = " AND {$this->parent_table}.{$this->external_parent_field} = '{$parent_id}' ";
         }    
         
         
-        /*select ONLY parents */
+        /*select ONLY parents */ /*selec those who don't exists on the left column*/
         $sql = "SELECT  {$this->base_table}.id as id FROM {$this->base_table}
             
                 $left_join
@@ -40,7 +71,7 @@ class TreeModel extends ParentModel{
 
                 "; 
         
-       //echo "[$sql]";
+       // echo "[$sql]";
         $a = $this->db->query($sql);
         $rows = $a->result_array();
       
@@ -211,5 +242,37 @@ class TreeModel extends ParentModel{
         
     }
     
+   
+    function configureTree() {
+       
+    $this->base_table = $this->getBaseTable();
+    $this->child_field =$this->getChildField();
+    $this->external_parent_field = $this->getExternalParentField();//"course_id"; /*in tassks_tasks external parent is project_id */
+    
+    $this->parent_field = $this->getParentField();//"related_content_id";
+    $this->link_table=$this->getLinkTable();//"contents_contents";
+    $this->model_name = $this->getModelName();//"Content";
+    $this->parent_table = $this->getParentTable();//"contents_courses"; /*for example parent : project child tasks*/
+    $this->parent_name = $this->getParentName();//'courses' /*projects*/; 
+        
+        
+    } 
+     
+    abstract function getExternalParentField(); /*in tassks_tasks external parent is project_id */
+    abstract function getParentField();//"example related_content_id or related_task_id ";
+    abstract function getLinkTable();//"contents_contents or tasks_tasks";
+    abstract function getModelName();//zbS "Content";
+    abstract function getParentTable();//
+    abstract function getParentName();//contents_courses //// zB /*projects taskss*/ 
+    /*example "tasks" in tasks -- (sub) tasks relationship */
+    abstract function getBaseTable();
+     /*example "task_id" in tasks -- (sub) tasks relationship */
+    abstract function getChildField();
+    
+    
+    /*inner array for self-relationship*/
+    
+    abstract function getRelated();
+    abstract function getSelf();
     
 }
