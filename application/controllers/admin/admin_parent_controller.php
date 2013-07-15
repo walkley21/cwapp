@@ -92,4 +92,14 @@ class admin_parent_controller extends MY_Controller
     }
     
     
+    function  form($id=null)
+    {
+        
+        $this->id = $id;
+        $this->view = 'form';
+       
+        $this->index();
+    }
+    
+    
 }

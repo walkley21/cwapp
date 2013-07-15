@@ -8,7 +8,7 @@ class contents extends admin_parent_controller
     public $parent_id;
     public $model_name = "Content";
     
-    
+    public $new_label = "Crear un nuevo contenido";
      
     
     
@@ -45,7 +45,7 @@ class contents extends admin_parent_controller
        
         //p($records);
         
-        $new_record_url = base_url("{$this->getControllerName()}/form/0/");
+        $new_record_url = admin_url("/{$this->getControllerName()}/form/0/{$this->parent}/{$this->parent_id}");
         
         $i = new I();
         $i->setClass("icon-plus");
@@ -64,6 +64,27 @@ class contents extends admin_parent_controller
             );
         
     }
+    
+    
+     function getFormData()
+    {
+       $action = admin_url("/{$this->getControllerName()}/save/{$this->id}");
+       $enctype = 'multipart/form-data';
+       $record = new $this->model_name($this->id);
+       
+       return array('title'=>'',
+                     'form_title'=>  $this->form_title,
+                     'subtitle'=>'',
+                     'form_action'=>$action,
+                     'form_enctype'=>$enctype,
+                     'record'=>$record
+            
+            
+            );
+        
+        
+    }
+    
     
     function getControllerName()
     {

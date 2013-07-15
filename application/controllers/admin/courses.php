@@ -92,14 +92,7 @@ class courses extends admin_parent_controller{
         
     }
     
-    function  form($id=null)
-    {
-        
-        $this->id = $id;
-        $this->view = 'form';
-       
-        $this->index();
-    }
+    
     
     
     
