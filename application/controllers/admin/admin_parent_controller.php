@@ -83,7 +83,19 @@ class admin_parent_controller extends MY_Controller
         
         $record->saveFromPost();
         
-        redirect("{$this->getControllerName()}");
+        
+        if (!empty($parent))
+        {
+            $parentObject = new $parent($parent_id);
+            $parentObject->save($record);
+            
+            
+        }    
+       
+        
+        //die(p($_POST));
+       /**/ 
+       redirect(admin_url("/".$this->getControllerName()));
         
     }
     

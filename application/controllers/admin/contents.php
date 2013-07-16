@@ -68,7 +68,12 @@ class contents extends admin_parent_controller
     
      function getFormData()
     {
-       $action = admin_url("/{$this->getControllerName()}/save/{$this->id}");
+         
+        //echo "[[$this->parent]"; 
+         
+       $id = empty($this->id)?'0':  $this->id;  
+         
+       $action = admin_url("/{$this->getControllerName()}/save/{$id}/course/2");
        $enctype = 'multipart/form-data';
        $record = new $this->model_name($this->id);
        
